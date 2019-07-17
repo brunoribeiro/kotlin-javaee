@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'node:9-alpine' }
+        docker { image 'ubuntu:lts' }
     }
     stages {
         stage('Test') {

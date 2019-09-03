@@ -4,6 +4,7 @@ pipeline {
 
                    checkout scm
               sh "echo 'dddd'"
+        }
 
     }
 }

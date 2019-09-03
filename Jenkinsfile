@@ -1,15 +1,19 @@
 pipeline {
-    stage('Build') {
-        echo 'Building...'
-        sh 'make'
+  agent any
+  stages {
+  stage('Stage 1') {
+      steps {
+        script {
+          echo 'Stage 1'
+        }
+      }
     }
-    stage('Test') {
-        echo 'Testing...'
-        sh 'make check || true'
-        junit '**/target/*.xml'
+  stage('Stage 2') {
+      steps {
+        script {
+          echo 'Stage 2'
+        }
+      }
     }
-    stage('Deploy') {
-        echo 'Deploying...'
-        sh 'make publish'
-    }
+  }
 }

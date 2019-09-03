@@ -1,4 +1,4 @@
-node('anyNodeName') {
+pipeline {
     stage('Build') {
         echo 'Building...'
         sh 'make'
